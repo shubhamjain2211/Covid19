@@ -1,0 +1,10 @@
+.Dashboard{
+    display: flex;
+    flex-direction: row;
+}
+.LeftDiv{
+    width:75%;
+}
+.RightDiv{
+    width: 25%;
+}

@@ -1,0 +1,7 @@
+.Country{
+    width: 29.5%;
+    height: 70vh;
+    border: 1px solid blue;
+    display: inline-block;
+    float: left;
+}       

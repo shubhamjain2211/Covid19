@@ -1,0 +1,7 @@
+.Trends{
+    width: 50%;
+    height: 40vh;
+    border: 1px solid orange;
+    display: inline-block;
+    float: left;
+}

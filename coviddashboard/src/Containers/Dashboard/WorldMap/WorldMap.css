@@ -1,0 +1,7 @@
+.WorldMap{
+    width: 70%;
+    height: 70vh;
+    border: 1px solid greenyellow;
+    display: inline-block;
+    float: right;
+}
