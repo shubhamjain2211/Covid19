@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './Trends.css'
+import './Trends.css'
 
 const trends = () =>{
     return(

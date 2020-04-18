@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './Country.css'
+import './Country.css'
 
 const country = () =>{
     return(

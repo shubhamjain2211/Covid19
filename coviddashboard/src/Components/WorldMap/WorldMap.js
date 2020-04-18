@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './WorldMap.css'
+import './WorldMap.css'
 
 const worldmap = () =>{
     return(
