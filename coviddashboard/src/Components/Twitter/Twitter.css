@@ -1,0 +1,34 @@
+.OuterTweetsBox {
+
+        border-radius : 8px;
+        padding : 5% 0;
+        height :  438px;        
+        width : 90%;
+        margin : auto;
+    }
+.OuterTweetsBox h4 {
+    padding : 2% 0 3% 3% ;
+}
+
+.InnerTweetBox {
+
+    height : 410px;
+    overflow-y : scroll;
+    padding : 7% 0 0 0;
+}
+
+.InnerTweetBox::-webkit-scrollbar {
+    width: 5px;
+  }
+
+
+.InnerTweetBox::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 5px;
+  }
+
+
+.InnerTweetBox::-webkit-scrollbar-thumb {
+    background-color: #ed757b; 
+    border-radius: 10px;
+  }

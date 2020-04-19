@@ -1,5 +1,76 @@
-.Country{
-    width: 29.5%;
-    height: 70vh;
-    border: 1px solid blue;
-}       
+.CountryDiv {
+    height : 410px;
+    width : 350px; 
+}
+ 
+.Img {
+ width : 10%;
+ border-radius: 3px;
+ 
+}
+
+.CountryDiv p {
+    font-size: 12px;
+  color : #66676e
+    
+}
+
+.InnerCard {
+    padding : 2%;
+}
+
+
+.CountryInfo {
+   display : flex;
+   padding : 2% ;  
+   align-items: center;
+
+}
+
+.CountryInfo h4 {
+   margin-left : 2%;
+}
+
+.eachOuterCard {
+    margin : 3% 2%;
+}
+
+.Arrows {
+    margin-right : 2%;
+}
+.eachCard {
+    padding : 3% 3%;
+    display: flex;
+    align-items : center;
+}
+.Statistics :nth-child(2)
+{
+    margin : 0 2%;
+}
+.Statistics {
+   
+    display: flex;
+    padding : 0 0 2% 2%;
+    font-weight : bold;
+}
+.searchbar {
+    padding : 2% 0;
+}
+
+.CountryList {
+    overflow-y: scroll;
+    height : 343px;
+    margin-top : 2%;
+}
+
+.CountryList::-webkit-scrollbar {
+    width: 5px;
+  }
+.CountryList::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 5px;
+  }
+.CountryList::-webkit-scrollbar-thumb {
+    background-color: #78ca97; 
+    border-radius: 10px;
+  }

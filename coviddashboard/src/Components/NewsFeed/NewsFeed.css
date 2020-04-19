@@ -1,0 +1,67 @@
+.NewsFeed {
+   width : 490px;
+   margin-left : 2%;
+}
+
+.Container {
+
+    display:  flex;
+    
+}
+
+.title {
+
+    width : 100%;
+    text-align: center;
+    padding : 3% 0 2% 0;
+    
+}
+.title span {
+    padding : 2% 2%;
+    background-color: #FFEAEB;
+    color : #FF0019;
+    font-size : 12px;
+    font-weight: bold;
+    border-radius : 5px;
+}
+
+.NewsImage {
+
+    padding : 3.5%;
+}
+
+.newsButton {
+    position : relative ;
+     left : 50%;
+     width : 135px;
+     height : 45px; 
+     margin-top : 10%;
+     background-color: #FFEAEB;
+     color : #FF0019;
+     font-size:  13px;
+     font-weight : 900;
+     border-radius : 4px;
+     border : none;
+     outline : none;
+}
+
+.newsButton a {
+
+    text-decoration: inherit;
+    color : inherit
+}
+
+.Content h2 {
+
+    font-size : 15px;
+    padding : 2% 0;
+    line-height:  25px;
+}
+.Content p {
+    font-size : 12px;
+}
+.Content {
+  
+    padding : 1% 2% 1% 2.5%;
+    width : 100%;
+}

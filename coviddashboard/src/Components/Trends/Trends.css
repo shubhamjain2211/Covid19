@@ -1,5 +1,30 @@
-.Trends{
-    width: 50%;
-    height: 40vh;
-    border: 1px solid orange;
+.SelectedBtn {
+    background-color: #52586A;
+    color : #fff;
+    height : 30px;
+    width : 86px;
+    border : none;
+    border-radius : 3px;   
+    outline: none;
+}
+
+.Btn {
+    background-color: #F5F5F5;
+    color : #30313A;
+    height : 30px;
+    width : 86px;
+    border : none;
+    outline: none;
+    border-radius: 3px;
+}
+
+.SpreadHeader {
+    display: flex;
+    justify-content: space-between;
+    padding : 2% 2%;
+}
+
+.SpreadHeader h4 {
+    font-weight: 900;
+    margin : 1%
 }
