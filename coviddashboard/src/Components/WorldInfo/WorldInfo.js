@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import Card from '../../Hoc/Card/Card'
+import Card from '../../hoc/Card/Card'
 import classes from './WorldInfo.css';
 import graph1 from '../../assets/images/gp.png'
 import Up from '../../assets/images/Up.png'

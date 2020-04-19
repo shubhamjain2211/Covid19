@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
-import mapDataWorld from './MapData'
+import mapData from './MapData'
 import getDataArray from './countryCod'
 import classes from './Map.css';
-import Card from '../../Hoc/Card/Card';
+import Card from '../../hoc/Card/Card';
 import {useSelector , useDispatch } from 'react-redux'
 import  * as actions from '../../Store/actions/index'
 const Map = () => {
@@ -43,7 +43,7 @@ const getCountryData = () => dispatch(actions.getCountryWiseData())
 
     series: [
       {
-        mapData: mapDataWorld,
+        mapData: mapData,
         name: 'World',
         data: mapData
       }

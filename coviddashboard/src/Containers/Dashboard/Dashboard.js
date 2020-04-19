@@ -1,15 +1,14 @@
-import React from  'react'
+import React from  'react';
 
-import Layout from '../../hoc/Layout/Layout';
-import DynamicStatDate from '../../components/Dynamic/Dynamic'
-import Country from '../../components/Country/Country'
-import NewsFeed from '../../components/NewsFeed/NewsFeed'
-import Map from '../../components/Map/Map'
+import DynamicStatDate from '../../Components/WorldInfo/WorldInfo';
+import Country from '../../Components/Country/Country';
+import NewsFeed from '../../Components/NewsFeed/NewsFeed';
+import Map from '../../Components/Map/Map';
 import classes from '../../App.css';
-import RecoveryBar from '../../components/RecoveryRatio/RecoveryRatio';
-import SpreadTrends from '../../components/Trends/Trends';
-import Tweets from '../../components/Twitter/Twitter';
-import Aux from '../../hoc/Aux/Aux';
+import classes from './Dashboard.css';
+import RecoveryBar from '../../Components/RecoveryRatio/RecoveryRatio';
+import SpreadTrends from '../../Components/Trends/Trends';
+import Twitter from '../../Components/Twitter/Twitter';
 
 
 const Home = () => {
@@ -29,7 +28,7 @@ const Home = () => {
         </article>
         <aside className={classes.SideBody}>
           <RecoveryBar />
-          <Tweets />
+          <Twitter />
         </aside>
 
       </main>

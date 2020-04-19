@@ -7,9 +7,9 @@ import { createStore, applyMiddleware, combineReducers, compose } from 'redux';
 import thunk from 'redux-thunk'
 import { Provider } from 'react-redux'
 import { BrowserRouter } from 'react-router-dom'
-import CountryWisReducer from './store/reducer/CountryWiseData'
-import TotalStat from './store/reducer/TotalStat'
-import spreadTrends from './store/reducer/spreadTrends'
+import CountryWisReducer from './Store/reducer/CountryWiseData'
+import TotalStat from './Store/reducer/TotalStat'
+import spreadTrends from './Store/reducer/spreadTrends'
 const rootReducer = combineReducers({
   countryWiseData: CountryWisReducer,
   TotalStat: TotalStat,

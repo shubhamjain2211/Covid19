@@ -1,9 +1,9 @@
 import React from 'react';
 
 import Layout from './hoc/Layout/Layout';
-import Home from './containers/Home/Home'
-import Faq from './containers/Faq/Faq'
-import HelpfulLinks from './containers/HelpfulLinks/HelpfulLinks'
+import Home from './Containers/Dashboard/Dashboard'
+import Faq from './Containers/Faq/Faq'
+import HelpfulLinks from './Containers/HelpfulLinks/HelpfulLinks'
 import { Route, Switch, Redirect } from 'react-router-dom'
 
 function App() {

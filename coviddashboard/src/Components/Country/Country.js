@@ -1,12 +1,12 @@
-import axios from 'axios'
-import React, { useEffect, useState } from 'react'
-import Card from '../../Hoc/Card/Card'
-import classes from './CountryData.css'
-import Searchbar from '../UI/SearchBar/Searchbar'
-import down from '../../assets/images/Down.png'
-import Up from '../../assets/images/Up.png'
-import {useSelector , useDispatch } from 'react-redux'
-import  * as actions from '../../Store/actions/index'
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import Card from '../../hoc/Card/Card';
+import classes from './Country.css';
+import Searchbar from '../UI/SearchBar/Searchbar';
+import down from '../../assets/images/Down.png';
+import Up from '../../assets/images/Up.png';
+import {useSelector , useDispatch } from 'react-redux';
+import  * as actions from '../../Store/actions/index';
 const Country = () => {
 
     const SearchedCountries = useSelector(state => state.countryWiseData.SearchedCountries)

@@ -4,7 +4,7 @@ import {
 } from 'recharts';
 import Card from '../../hoc/Card/Card'
 import classes from './Trends.css'
-import * as actions from '../../store/actions/index'
+import * as actions from '../../Store/actions/index'
 import axios from 'axios'
 import { useDispatch, useSelector } from 'react-redux';
 
