@@ -1,0 +1,29 @@
+.Container{
+    background-color: #f7f7f7;
+    height: 100vh;
+}
+
+.MainDiv{
+    width:75%;
+    color: #387cfa;
+    border-bottom-left-radius: 2px;
+    box-shadow: 0px 5px 20px #1425401A;
+    margin: auto;
+    padding: 2rem;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.Heading{
+    text-align: center;
+}
+
+.Links{
+    text-decoration: none;
+    color: #387cfa;
+}
+
+.Links:hover{
+    color:#074dcf;
+    font-style: italic;
+}

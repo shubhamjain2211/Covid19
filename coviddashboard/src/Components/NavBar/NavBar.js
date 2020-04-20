@@ -1,26 +1,23 @@
-import React from 'react'
-import { Component } from 'react';
-import NavLinks from './NavLinks/NavLinks'
-import classes from './NavBar.css'
-import Logo from  '../UI/Logo/Logo'
+import React, { Component } from 'react';
+import Nav from './NavLinks/NavLinks';
+import classes from './NavBar.module.css';
+import Logo from '../../assets/images/covidLogo.png';
+
 class NavBar extends Component {
-
     render() {
-
         return(
-           <header className = {classes.NavBar}>
-               <div className = {classes.Logo}>
-                   <Logo />
+           <div className = {classes.NavBar}>
+               <div className = {classes.LogoDiv}>
+                    <img className={classes.Logo} src = {Logo} />
+                    <p>COVID'19</p>
                </div>
-               <div className = {classes.Navlink}>
-               <NavLinks  exact link = '/'>Home </NavLinks>
-                <NavLinks link = '/Faq'>Faq</NavLinks>
-                <NavLinks link = '/helpfulLink'>HelpFul links</NavLinks>
+               <div className = {classes.Nav}>
+                <Nav  exact link = '/'>Home</Nav>
+                <Nav link = '/Faq'>Faqs</Nav>
+                <Nav link = '/helpfulLink'>HelpFul Links</Nav>
                </div>
-              
-           </header>
+           </div>
         )
     }
 }
-
 export default NavBar;

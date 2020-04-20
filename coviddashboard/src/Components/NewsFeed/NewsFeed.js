@@ -1,27 +1,12 @@
-import React, { useEffect, useState } from 'react'
-import axios from 'axios'
-import classes from './NewsFeed.css'
-import Personimage from '../../assets/images/newsFeed.png'
-import Card from '../../hoc/Card/Card'
-import { data } from './Local_response'
+import React, { useEffect, useState } from 'react';
+import classes from './NewsFeed.module.css';
+import Personimage from '../../assets/images/newsFeed.png';
+import { data } from './Local_response';
 const NewsFeed = (props) => {
 
     const [newsArticles, setnewsArticles] = useState({ headline: "Stay home , stay safe ", description: "we'll keep you updated", ArticleLink: "", articleid: 0 })
 
-    // setnewsArticles({ headline: headline, description: description, ArticleLink: pageUrl })
     useEffect(() => {
-        // axios.get('Local_response.json')
-        //     .then((Response) => {
-
-        //         console.log(Response.data)
-        //         const newsContent = { ...Response.data.articles[0] };
-        //         const headline = newsContent.title.slice(0, 60)
-        //         const description = newsContent.description.slice(0, 70);
-        //         const pageUrl = newsContent.url;
-
-        //         setnewsArticles({ headline: headline, description: description, ArticleLink: pageUrl })
-
-        //     })
 
         const interval = setInterval(() => {
             console.log("this runs")
@@ -69,7 +54,7 @@ const NewsFeed = (props) => {
 
     return (
         <div className={classes.NewsFeed}>
-            <Card>
+            <div className={classes.Box}>
                 <div className={classes.title}><span>News and Updates</span></div>
                 <div className={classes.Container}>
                     <div className={classes.NewsImage}>
@@ -84,7 +69,7 @@ const NewsFeed = (props) => {
                 </div>
 
 
-            </Card>
+            </div>
         </div>
     )
 }

@@ -1,22 +1,16 @@
-import React, { useEffect, useState } from 'react'
-import classes from './RecoveryRatio.css'
-import Card from '../../hoc/Card/Card'
-import { useSelector } from 'react-redux'
-const RecoveryBar = (props) => {
+import React, { useEffect, useState } from 'react';
+import classes from './RecoveryRatio.module.css';
+import { useSelector } from 'react-redux';
+const RecoveryRatio = (props) => {
 
     const percentage = useSelector(state => state.TotalStat.percentage);
     const statData = useSelector(state => state.TotalStat.RFormatted);
     const Cases = useSelector(state => state.TotalStat.TCFormatted);
-    // const [RecoveryRatio, setRecoveryRatio] = useState({  percentage: 0 , statData: 0 , Cases : 0})
-
-
-
     const percent = 565 - (565 * percentage) / 100;
-
 
     return (
         <div className={classes.pt}>
-            <Card>
+            <div className={classes.Box}>
                 <h4>Ratio of Recovery</h4>
                 <div className={classes.ProgressBar}>
                     <svg className={classes.ProgressSvg}>
@@ -31,9 +25,9 @@ const RecoveryBar = (props) => {
                     <p>|</p>
                     <p>{statData} Recovered</p>
                 </div>
-            </Card>
+            </div>
         </div>
     )
 }
 
-export default RecoveryBar 
+export default RecoveryRatio;

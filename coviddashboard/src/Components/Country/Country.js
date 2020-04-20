@@ -1,22 +1,19 @@
-import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import Card from '../../hoc/Card/Card';
-import classes from './Country.css';
-import Searchbar from '../UI/SearchBar/Searchbar';
-import down from '../../assets/images/Down.png';
 import Up from '../../assets/images/Up.png';
 import {useSelector , useDispatch } from 'react-redux';
 import  * as actions from '../../Store/actions/index';
+import classes from './Country.module.css';
+import Search from './Searchbar';
+import down from '../../assets/images/Down.png';
+
 const Country = () => {
 
     const SearchedCountries = useSelector(state => state.countryWiseData.SearchedCountries)
     const AllCountries = useSelector(state => state.countryWiseData.AllCountries)
     const dispatch = useDispatch();
-
     const getCountryData = () => dispatch(actions.getCountryWiseData())
     const updateSearchedCountries = (SearchedCountries) => dispatch(actions.updateSearchedCountries(SearchedCountries))
     useEffect(() => {
-        console.log("this Countrydata called")
                 getCountryData()
     }, [])
 
@@ -46,7 +43,7 @@ const Country = () => {
     const CountryWiseData = SearchedCountries.map((eachCountry) => {
         return (
             <div className={classes.eachOuterCard}>
-                <Card>
+                <div className={classes.Box}>
 
                     <div className={classes.eachCard}>
                         <div>
@@ -65,22 +62,16 @@ const Country = () => {
                             <img src = {eachCountry.todayCases>0 ? Up : down} />
                         </div>
                     </div>
-
-
-
-                </Card>
+                </div>
 
             </div>
-
-
         )
-
     })
     return (<div className={classes.CountryDiv}>
-        <Card>
+        <div className={classes.Box}>
             <div className={classes.InnerCard}>
                 <div className={classes.searchbar}>
-                    <Searchbar searchFilterHandler={OnSearchFilterHandler} />
+                    <Search searchFilterHandler={OnSearchFilterHandler} />
                 </div>
                 <div className={classes.CountryList}>
                     {CountryWiseData}
@@ -88,7 +79,7 @@ const Country = () => {
             </div>
 
 
-        </Card> </div>)
+        </div> </div>)
 
 }
 

@@ -1,30 +1,22 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import {
     LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
 } from 'recharts';
-import Card from '../../hoc/Card/Card'
-import classes from './Trends.css'
-import * as actions from '../../Store/actions/index'
-import axios from 'axios'
+import classes from './Trends.module.css';
+import * as actions from '../../Store/actions/index';
 import { useDispatch, useSelector } from 'react-redux';
 
-const SpreadTrends = (props) => {
-
-
+const Trends = (props) => {
     const dispatch = useDispatch();
     const  getGraphData  = () => dispatch(actions.getGraphData())
     const GraphData = useSelector(state => state.SpreadTrends.GraphData)
     const [graphType, setGraphType] = useState("Affected")
-
-     
     const [buttonState, setButtonsState] = useState([{ id: 1, flag: true, name: "Affected" },
     { id: 2, flag: false, name: "Recovered" },
     { id: 3, flag: false, name: "Deaths" }])
-
    useEffect(() => {
     getGraphData();
    } , [])
-
     const graphChangeHandler = (id) => {
         const btnState = [...buttonState];
         console.log(btnState);
@@ -32,31 +24,23 @@ const SpreadTrends = (props) => {
             if (buttonState[i].id == id) {
                 setGraphType(buttonState[i].name)
                 btnState[i].flag = true;
-
             }
             else {
                 btnState[i].flag = false;
-
             }
         }
         setButtonsState(btnState);
-
     }
-
     const buttons = buttonState.map((eachButton) => {
         let id = eachButton.id
-
         return (
             <button className={eachButton.flag ? classes.SelectedBtn : classes.Btn}
                 onClick={() => graphChangeHandler(id)}>{eachButton.name}</button>
         )
     })
-
     const data = GraphData;
-
     return (
-
-        <Card>
+        <div className={classes.Box}>
             <div>
                 <div className={classes.SpreadHeader}>
                     <h4>Spread Trends</h4>
@@ -72,10 +56,9 @@ const SpreadTrends = (props) => {
                 </LineChart>
             </div>
 
-        </Card>
+        </div>
     )
 }
-
-export default SpreadTrends
+export default Trends;
 
 

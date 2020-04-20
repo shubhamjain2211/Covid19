@@ -1,0 +1,29 @@
+.Main{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.Country{
+    display : flex;
+    margin : 2% 0;
+  }
+  .Social{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  @media(max-width:700px){
+    .Main{
+      flex-direction: column;
+    }
+    .MainBody{
+      display: flex;
+      flex-direction: column;
+    }
+    .Country{
+      flex-direction: column;
+    }
+    .Social{
+      flex-direction: column;
+    }
+  }

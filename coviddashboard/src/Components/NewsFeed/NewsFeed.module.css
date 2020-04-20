@@ -3,6 +3,13 @@
    margin-left : 2%;
 }
 
+.Box {
+    background-color:white;
+	box-shadow: 0px 5px 20px #1425401A;
+    border-radius: 8px;
+}
+
+
 .Container {
 
     display:  flex;

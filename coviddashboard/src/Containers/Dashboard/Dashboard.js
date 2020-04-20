@@ -1,38 +1,32 @@
 import React from  'react';
-
-import DynamicStatDate from '../../Components/WorldInfo/WorldInfo';
+import WorldInfo from '../../Components/WorldInfo/WorldInfo';
 import Country from '../../Components/Country/Country';
 import NewsFeed from '../../Components/NewsFeed/NewsFeed';
 import Map from '../../Components/Map/Map';
-import classes from '../../App.css';
-import classes from './Dashboard.css';
-import RecoveryBar from '../../Components/RecoveryRatio/RecoveryRatio';
-import SpreadTrends from '../../Components/Trends/Trends';
+import classes from './Dashboard.module.css';
+import RecoveryRatio from '../../Components/RecoveryRatio/RecoveryRatio';
+import Trends from '../../Components/Trends/Trends';
 import Twitter from '../../Components/Twitter/Twitter';
 
-
-const Home = () => {
+const Dashboard = () => {
     return(
-       
-        <main className={classes.MainContainer}>
-        <article className={classes.MainBody}>
-          <DynamicStatDate />
-          <div className={classes.CountryDetailSection}>
-            <Country />
-            <Map />
-          </div>
-          <div className = {classes.SocialInfo}>
-            <SpreadTrends />
+        <div className={classes.Main}>
+          <div className={classes.MainBody}>
+            <WorldInfo />
+            <div className={classes.Country}>
+              <Country />
+              <Map />
+            </div>
+            <div className = {classes.Social}>
+            <Trends />
             <NewsFeed />
+            </div>
           </div>
-        </article>
-        <aside className={classes.SideBody}>
-          <RecoveryBar />
+        <div className={classes.SideBody}>
+          <RecoveryRatio />
           <Twitter />
-        </aside>
-
-      </main>
+        </div>
+        </div>
     )
 }
-
-export default Home;
+export default Dashboard;

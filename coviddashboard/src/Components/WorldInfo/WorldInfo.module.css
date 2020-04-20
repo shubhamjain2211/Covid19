@@ -6,11 +6,7 @@
     display: flex;
     justify-content: space-around;
 }
-.dailyCasereport Card {
-    display: flex;
-    justify-content : center;
-    align-items : center;
-}
+
 .dailyCasereport h3 {
    padding : 5% 5% 0 0;
    font-size : 24px;
@@ -26,3 +22,18 @@
    justify-content: space-between;
     
 }
+.Box{
+    background-color:white;
+	box-shadow: 0px 5px 20px #1425401A;
+    border-radius: 8px;
+    opacity: 1;
+}
+
+@media(max-width:700px){
+      .dailyCasereportSection{
+      flex-direction: column;
+      align-items: center;
+      }
+      .dailyCasereport{
+      width: 80vh;
+    }}

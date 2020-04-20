@@ -1,10 +1,9 @@
-import React from 'react'
+import React from 'react';
 import { TwitterTimelineEmbed, TwitterShareButton, TwitterFollowButton, TwitterHashtagButton, TwitterMentionButton, TwitterTweetEmbed, TwitterMomentShare, TwitterDMButton, TwitterVideoEmbed, TwitterOnAirButton } from 'react-twitter-embed';
-import Card from '../../hoc/Card/Card';
-import classes from './Twitter.css';
-import {FaTwitter} from 'react-icons/fa'
+import classes from './Twitter.module.css';
+import {FaTwitter} from 'react-icons/fa';
 
-const Tweets = (props) => {
+const Twitter = (props) => {
 
     const sources = ["WHO", "timesofindia", "PMOIndia", "realDonaldTrump"]
 
@@ -21,18 +20,15 @@ const Tweets = (props) => {
 
     return (
         <div className = {classes.OuterTweetsBox}>
-            <Card>
+            <div className={classes.Box}>
                 <h4>Latest tweets <FaTwitter color = "#54b5f5" /></h4>
                 <div className = {classes.InnerTweetBox}>
                     {tweets}
                 </div>
-          </Card>
+          </div>
 
         </div>
 
     )
 }
-
-
-
-export default Tweets
+export default Twitter;
